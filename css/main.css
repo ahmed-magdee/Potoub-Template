@@ -1,0 +1,308 @@
+:root {
+  --blue-color: #00aeef;
+  --heading-color: #382d3c;
+  --section-color: #212120;
+  --body-color: #666666;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* Start Main Button */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+}
+.read-more:hover {
+  background-color: var(--heading-color);
+  color: white !important;
+}
+.carousel-indicators {
+  bottom: -75px;
+}
+h1 span {
+  color: var(--blue-color);
+}
+.scroll-to-top {
+  width: 35px;
+  height: 35px;
+  background-color: #c5c5c5;
+  bottom: 20px;
+  right: -35px;
+}
+.scroll-to-top.open {
+  right: 20px;
+}
+.scroll-to-top:hover {
+  background-color: var(--blue-color);
+}
+/* End Main Button */
+/* Start Header */
+header {
+  background-color: #00aeef;
+  z-index: 1;
+}
+header::before {
+  content: "";
+  background-image: url("../images/cross_top.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 558px;
+  height: 228px;
+  z-index: -1;
+}
+@media (max-width: 991.9px) {
+  header::before {
+    display: none;
+  }
+}
+@media (max-width: 767.9px) {
+  .buttons {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+nav .buttons a {
+  color: white;
+  display: inline-block;
+  margin-right: 20px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+@media (max-width: 575px) {
+  nav .buttons a {
+    margin-right: 5px;
+    font-size: 0.8rem;
+  }
+}
+nav .buttons a:first-child {
+  background-color: white;
+  color: var(--heading-color);
+}
+nav .buttons a:first-child:hover {
+  background-color: var(--heading-color);
+  color: white;
+}
+/* End Header */
+/* Start Left Nav */
+.left-nav {
+  top: 0;
+  width: 220px;
+  min-height: 100vh;
+  background-color: white;
+  box-shadow: 3px 3px 3px rgb(0 0 0 / 20%);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  transform: translateX(-222px);
+  -webkit-transform: translateX(-222px);
+  -moz-transform: translateX(-222px);
+  -ms-transform: translateX(-222px);
+  -o-transform: translateX(-222px);
+}
+.left-nav.opend {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+.left-nav .open {
+  background-color: white;
+  right: -30px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 190px;
+}
+.left-nav .left-icon {
+  background-color: var(--heading-color);
+}
+.left-nav .left-icon:hover {
+  background-color: var(--blue-color);
+}
+.left-nav .open .setting {
+  padding: 7px;
+}
+.left-nav .links-left li {
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.left-nav .links-left li.active,
+.left-nav .links-left li:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+/* End Left Nav */
+/* Start Landing */
+.landing {
+  background-color: var(--blue-color);
+  min-height: calc(100vh - 93px);
+}
+.prev-button,
+.next-button {
+  height: 80px;
+  top: 100%;
+}
+/* End Landing */
+/* Start About Us */
+.about-us .text h1 span {
+  color: var(--blue-color);
+}
+.about-us .read-more {
+  background-color: white;
+  border-color: var(--blue-color);
+}
+.about-us .read-more:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+/* End About Us */
+/* Start Why Choose Us */
+.choose-us .choose-container {
+  background-image: url("../images/why.jpg");
+  background-size: cover;
+}
+@media (max-width: 575px) {
+  .choose-us .choose-container .features {
+    font-size: 1.25rem !important;
+  }
+}
+.choose-us .choose-container .features li {
+  position: relative;
+  transition: 0.3s;
+  padding: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.choose-us .choose-container .features li:not(:last-child) {
+  margin-bottom: 10px;
+}
+.choose-us .choose-container .features li.active,
+.choose-us .choose-container .features li:hover {
+  background-color: var(--section-color);
+  color: white;
+}
+.choose-us .choose-container .features li.active:before {
+  content: "";
+  position: absolute;
+  border: 15px;
+  border-style: solid;
+  border-color: transparent transparent transparent var(--section-color);
+  right: -29px;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+@media (max-width: 767.9px) {
+  .choose-us .choose-container .features li.active:before {
+    display: none;
+  }
+}
+.choose-us .choose-container .info h4 {
+  color: var(--blue-color);
+}
+/* End Why Choose Us */
+/* Start Work */
+.work .read-more {
+  background-color: white;
+  border-color: var(--blue-color);
+}
+.work .read-more:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+/* End Work */
+/* Start call-back */
+.call-back {
+  background-color: var(--blue-color);
+}
+.call-back h1 span {
+  color: white;
+}
+.call-back form textarea {
+  height: 200px;
+}
+.call-back form input[type="submit"] {
+  width: 140px;
+}
+.call-back form input[type="submit"]:hover {
+  background-color: var(--section-color);
+  color: white;
+}
+@media (max-width: 575px) {
+  .call-back .google-maps div iframe {
+    height: 200px;
+  }
+}
+/* End call-back */
+/* Start Footer */
+footer {
+  background-color: var(--section-color);
+}
+footer .text p {
+  color: var(--body-color);
+}
+footer .links-footer ul.style {
+  list-style: inside;
+}
+footer .links-footer ul li:hover {
+  color: var(--blue-color);
+}
+footer .links-footer ul li:hover i {
+  color: var(--blue-color);
+}
+footer .links-footer ul li i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  color: black;
+  font-size: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+footer .form-footer input[type="submit"] {
+  background-color: var(--blue-color);
+  color: white;
+}
+footer .form-footer input[type="submit"]:hover {
+  background-color: #0291c5;
+  color: white;
+}
+footer .text-footer {
+  background-color: var(--blue-color);
+}
+/* End Footer */
